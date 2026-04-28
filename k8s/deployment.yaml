@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bauermedia-app
+  labels:
+    app: bauermedia
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bauermedia
+  template:
+    metadata:
+      labels:
+        app: bauermedia
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
