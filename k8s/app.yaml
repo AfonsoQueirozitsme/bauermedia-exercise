@@ -5,7 +5,7 @@ metadata:
   labels:
     app: bauermedia
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: bauermedia
@@ -31,4 +31,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+      nodePort: 30080
   type: NodePort
