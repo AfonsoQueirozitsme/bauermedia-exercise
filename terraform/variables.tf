@@ -1,26 +1,11 @@
-variable "tenancy_ocid" {
+variable "aws_region" {
   type        = string
-  description = "Tenancy OCID"
+  description = "AWS Region"
+  default     = "us-east-1"
 }
 
-variable "user_ocid" {
+variable "instance_type" {
   type        = string
-  description = "User OCID"
-}
-
-variable "fingerprint" {
-  type        = string
-  description = "API key fingerprint"
-}
-
-variable "region" {
-  type        = string
-  description = "Oracle Cloud Region"
-  default     = "eu-frankfurt-1"
-}
-
-variable "private_key_path" {
-  type        = string
-  description = "Path to the private key .pem file"
-  default     = "./oci_api_key.pem"
+  description = "EC2 instance type (ARM Graviton)"
+  default     = "t4g.small"
 }
